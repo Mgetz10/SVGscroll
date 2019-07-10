@@ -1,0 +1,58 @@
+html {
+  background: #2d352e;
+}
+
+div {
+  height: 5000px;
+  width: 100%;
+
+  /* position: ; */
+}
+
+.svg {
+  width: 90%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.top {
+  top: 80%;
+}
+
+.middle {
+  top: 240%;
+}
+
+.bottom {
+  top: 340%;
+}
+
+.Layer_1 {
+  stroke: black;
+  z-index: 0;
+  stroke-width: 1;
+}
+
+.Layer_2 {
+  stroke: white;
+  z-index: 2;
+  stroke-width: 0.5;
+}
+
+.Layer_3 {
+  stroke: #2775e2;
+  filter: blur(2px);
+  z-index: 1;
+  stroke-width: 2;
+}
+
+.comp {
+  position: fixed;
+  width: 33%;
+  top: -12%;
+  z-index: 3;
+  left: 6%;
+}
