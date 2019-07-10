@@ -162,7 +162,6 @@ window.addEventListener("scroll", function () {
         var draw = 0;
         if (scrollpercent > bottomOffset) {
             draw = lengths[index] * (scrollpercent - bottomOffset);
-            console
         }
 
         // Reverse the drawing (when scrolling upwards)

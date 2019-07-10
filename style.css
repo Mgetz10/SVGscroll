@@ -5,7 +5,6 @@ html {
 div {
   height: 5000px;
   width: 100%;
-
   /* position: ; */
 }
 
@@ -19,15 +18,15 @@ div {
 }
 
 .top {
-  top: 80%;
+  top: 750px;
 }
 
 .middle {
-  top: 240%;
+  top: 2400px;
 }
 
 .bottom {
-  top: 340%;
+  top: 3450px;
 }
 
 .Layer_1 {
