@@ -87,8 +87,8 @@ svgs6.forEach(function (svg, index) {
 
 // offset the svg dash by the same amount as the percentage scrolled
 window.addEventListener("scroll", function () {
+    const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
     svgs1.forEach(function (svg, index) {
-        const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         const draw = lengths[index] * scrollpercent;
 
 
@@ -98,19 +98,18 @@ window.addEventListener("scroll", function () {
         }
     })
     svgs2.forEach(function (svg, index) {
-        const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = 0;
-        // console.log({
-        //     'document.body.scrollTop': document.body.scrollTop,
-        //     'document.documentElement.scrollTop': document.documentElement.scrollTop,
-        //     'document.documentElement.scrollHeight': document.documentElement.scrollHeight,
-        //     'document.documentElement.clientHeight': document.documentElement.clientHeight,
-        //     'dbs + dds': (document.body.scrollTop + document.documentElement.scrollTop),
-        //     'ddsh - ddc': (document.documentElement.scrollHeight - document.documentElement.clientHeight),
-        //     "scrollpercent": scrollpercent,
-        //     "draw": draw
-        // })
         draw = lengths[index] * scrollpercent;
+        console.log({
+            'document.body.scrollTop': document.body.scrollTop,
+            'document.documentElement.scrollTop': document.documentElement.scrollTop,
+            'document.documentElement.scrollHeight': document.documentElement.scrollHeight,
+            'document.documentElement.clientHeight': document.documentElement.clientHeight,
+            'dbs + dds': (document.body.scrollTop + document.documentElement.scrollTop),
+            'ddsh - ddc': (document.documentElement.scrollHeight - document.documentElement.clientHeight),
+            "scrollpercent": scrollpercent,
+            "draw": draw
+        })
 
         // Reverse the drawing (when scrolling upwards)
         // if (scrollpercent > 0.5) {
@@ -119,7 +118,6 @@ window.addEventListener("scroll", function () {
     })
     const middleOffset = 0.4;
     svgs3.forEach(function (svg, index) {
-        const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = 0;
         if (scrollpercent > middleOffset) {
             draw = lengths[index] * (scrollpercent - middleOffset);
@@ -132,7 +130,6 @@ window.addEventListener("scroll", function () {
         // }
     })
     svgs4.forEach(function (svg, index) {
-        const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = 0;
         if (scrollpercent > middleOffset) {
             draw = lengths[index] * (scrollpercent - middleOffset);
@@ -145,7 +142,6 @@ window.addEventListener("scroll", function () {
     })
     const bottomOffset = 0.75;
     svgs5.forEach(function (svg, index) {
-        const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = 0;
         if (scrollpercent > bottomOffset) {
             draw = lengths[index] * (scrollpercent - bottomOffset);
@@ -158,7 +154,6 @@ window.addEventListener("scroll", function () {
         // }
     })
     svgs6.forEach(function (svg, index) {
-        const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = 0;
         if (scrollpercent > bottomOffset) {
             draw = lengths[index] * (scrollpercent - bottomOffset);
