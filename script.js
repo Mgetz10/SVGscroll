@@ -117,7 +117,7 @@ window.addEventListener("scroll", function () {
         svg.style.strokeDashoffset = lengths[index] - draw / 10;
         // }
     })
-    const middleOffset = 0.50;
+    const middleOffset = 0.4;
     svgs3.forEach(function (svg, index) {
         const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = 0;
@@ -143,7 +143,7 @@ window.addEventListener("scroll", function () {
         svg.style.strokeDashoffset = lengths[index] - draw / 10;
         // }
     })
-    const bottomOffset = 0.8;
+    const bottomOffset = 0.75;
     svgs5.forEach(function (svg, index) {
         const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = 0;
@@ -154,7 +154,7 @@ window.addEventListener("scroll", function () {
 
         // Reverse the drawing (when scrolling upwards)
         // if (scrollpercent < 0.5) {
-        svg.style.strokeDashoffset = lengths[index] - draw / 2;
+        svg.style.strokeDashoffset = lengths[index] - draw / 5;
         // }
     })
     svgs6.forEach(function (svg, index) {
@@ -166,7 +166,7 @@ window.addEventListener("scroll", function () {
 
         // Reverse the drawing (when scrolling upwards)
         // if (scrollpercent > 0.5) {
-        svg.style.strokeDashoffset = lengths[index] - draw / 4;
+        svg.style.strokeDashoffset = lengths[index] - draw / 10;
         // }
     })
 });
