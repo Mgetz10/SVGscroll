@@ -15,6 +15,19 @@ p {
   margin: 0;
 }
 
+.mobileConsoleLog {
+  position: fixed;
+  top: 0vh;
+  left: 20vw;
+  font-size: 4rem;
+  color: blue;
+  z-index: 100;
+}
+
+span {
+  color: red;
+}
+
 /* layers for all draw effects */
 .svg {
   position: absolute;
@@ -68,6 +81,14 @@ p {
   width: 100%;
 }
 
+.topWords {
+  position: absolute;
+  top: 5%;
+  height: 23%;
+  width: 60%;
+  left: 40%;
+}
+
 .blurbar {
   position: absolute;
   width: 100%;
@@ -98,25 +119,22 @@ p {
 
 .logo {
   position: absolute;
-  width: 51%;
-  left: 40%;
-  top: 5%;
+  width: 85%;
+  top: 0%;
 }
 
 .understanding {
   position: absolute;
-  width: 34%;
-  left: 40%;
-  top: 10%;
+  width: 54%;
+  top: 29%;
   font-size: 2.4rem;
   font-weight: 400;
 }
 
 .eLearning {
   position: absolute;
-  width: 41%;
-  left: 40%;
-  top: 18%;
+  width: 71%;
+  top: 66%;
   line-height: 1.2rem;
   font-family: Roboto;
   z-index: 4;
@@ -124,16 +142,16 @@ p {
 
 .view-video {
   position: absolute;
-  width: 18%;
-  left: 64%;
-  top: 24.4%;
+  width: 26%;
+  left: 43%;
+  top: 86.4%;
   font-family: 'YanoneKaffeesatz';
   background: #ff9901;
   border: none;
   padding: 0%;
   border-radius: 3px;
   color: white;
-  height: 3.5%;
+  height: 13.5%;
   font-size: 2rem;
   margin: 0%;
   box-shadow: -1px 2px 5px #00000047;
@@ -157,16 +175,47 @@ p {
 }
 
 .iframeContainer {
+  display: flex;
   position: absolute;
   top: 67%;
   width: 63%;
   left: 18.5%;
   z-index: 1;
+  height: 30%;
+  overflow: hidden;
 }
 
 .iframeContainer img {
+  position: absolute;
   width: 100%;
   height: 100%;
+  left: 0%;
+  transition: all 0.1s linear;
+}
+
+.iframeContainer :nth-child(1) {
+  position: absolute;
+  left: 0;
+}
+
+.iframeContainer :nth-child(2) {
+  position: absolute;
+  left: 100%;
+}
+
+.iframeContainer :nth-child(3) {
+  position: absolute;
+  left: 200%;
+}
+
+.iframeContainer :nth-child(4) {
+  position: absolute;
+  left: 300%;
+}
+
+.iframeContainer :nth-child(5) {
+  position: absolute;
+  left: 400%;
 }
 
 .arrow {
@@ -174,6 +223,8 @@ p {
   width: 4%;
   height: 3.2%;
   border: none;
+  cursor: pointer;
+  z-index: 4;
 }
 
 .arrow img {
