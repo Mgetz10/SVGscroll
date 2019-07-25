@@ -123,32 +123,3 @@ window.addEventListener("scroll", function () {
         }
     })
 });
-
-
-// carousel
-const iframeContainer = document.querySelector('.iframeContainer')
-const carouselImgs = [...document.querySelectorAll('.iframeContainer img')];
-const arrowLeft = document.querySelector('.arrowLeft');
-const arrowRight = document.querySelector('.arrowRight');
-
-
-function move(direction) {
-    carouselImgs.forEach((img, index) => {
-        console.log(img.offsetLeft, iframeContainer.offsetWidth)
-        var newPositionCalc
-        if (direction === "left") {
-            var newPositionCalc = (img.offsetLeft + 1) - iframeContainer.offsetWidth;
-        } else if (direction === "right") {
-            var newPositionCalc = (img.offsetLeft + 1) + iframeContainer.offsetWidth;
-        }
-        var newLeft = newPositionCalc * 100 / iframeContainer.offsetWidth;
-        img.style.left = '' + newLeft + '%';
-        console.log('' + newLeft + '%')
-    })
-}
-arrowLeft.addEventListener('click', function () {
-    move("left")
-})
-arrowRight.addEventListener('click', function () {
-    move("right")
-})
