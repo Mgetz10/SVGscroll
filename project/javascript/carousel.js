@@ -27,10 +27,9 @@ function move(paramDirection) {
         newPos = parseInt(this.classList[1].split('dot')[1])
     }
 
-    console.log(newPos, activePos)
     imgPos.remove('active')
-    carouselImgs[newPos].classList.add('active')
     dots[activePos].classList.remove('dotActive')
+    carouselImgs[newPos].classList.add('active')
     dots[newPos].classList.add('dotActive')
 
     carouselImgs[newPos].style.left = '0%';
@@ -40,7 +39,6 @@ function move(paramDirection) {
         var posDif = thisPos - newPos
         var newPercentage = '' + posDif + "00" + '%'
         carouselImgs[thisPos].style.left = newPercentage;
-        console.log(newPercentage)
     })
 }
 
