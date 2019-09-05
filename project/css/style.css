@@ -318,16 +318,16 @@ span {
   left: 10%;
 }
 
-.interactionIframe.hidden {
+.interactionIframeContainer.hidden {
   display: none;
 }
 
-.interactionIframe.hidden iframe {
+.interactionIframeContainer.hidden iframe {
   top: 35%;
   opacity: 0;
 }
 
-.interactionIframe {
+.interactionIframeContainer {
   position: fixed;
   top: 0;
   width: 100%;

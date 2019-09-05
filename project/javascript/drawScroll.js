@@ -1,3 +1,19 @@
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function () {
+        var context = this,
+            args = arguments;
+        var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
 const svgs = [...document.getElementsByClassName("svgPath")]
 const svgs1 = [...document.getElementsByClassName("path1")]
 const svgs2 = [...document.getElementsByClassName("path2")]
@@ -38,8 +54,7 @@ svgs.forEach(function (svg, index) {
     svg.style.strokeDashoffset = lengths[index];
 })
 
-// offset the svg dash by the same amount as the percentage scrolled
-window.addEventListener("scroll", function () {
+function scrollFunc() {
     var isMobile = false; //initiate as false
     // device detection
     if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
@@ -123,4 +138,6 @@ window.addEventListener("scroll", function () {
                 break;
         }
     })
-});
+}
+// offset the svg dash by the same amount as the percentage scrolled
+window.addEventListener("scroll", debounce(scrollFunc));

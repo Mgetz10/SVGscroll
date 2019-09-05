@@ -1,16 +1,19 @@
 const interactiveBtns = document.querySelectorAll('.option')
 const optionsContainer = document.querySelector('.optionsContainer')
 const bottomContainer = document.querySelector('.bottomContainer')
-const interactionIframe = document.querySelector('.interactionIframe')
+const interactionIframeContainer = document.querySelector('.interactionIframeContainer')
+const interactionIframe = document.querySelector('#interactionIframe')
 
 function iframeShow() {
-    interactionIframe.classList.remove('hidden')
+    interactionIframeContainer.classList.remove('hidden')
+    interactionIframe.src = this.dataset.src
+    console.log(interactionIframeContainer.classList)
 }
 
 function hideIframe() {
-    interactionIframe.classList.add('hidden')
+    interactionIframeContainer.classList.add('hidden')
 }
 
-interactionIframe.addEventListener('click', hideIframe)
+interactionIframeContainer.addEventListener('click', hideIframe)
 
 interactiveBtns.forEach(btn => btn.addEventListener('click', iframeShow))
