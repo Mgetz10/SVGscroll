@@ -1,26 +1,26 @@
-function debounce(func, wait = 20, immediate = true) {
-    var timeout;
-    return function () {
-        var context = this,
-            args = arguments;
-        var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-}
+// function debounce(func, wait = 20, immediate = true) {
+//     var timeout;
+//     return function () {
+//         var context = this,
+//             args = arguments;
+//         var later = function () {
+//             timeout = null;
+//             if (!immediate) func.apply(context, args);
+//         };
+//         var callNow = immediate && !timeout;
+//         clearTimeout(timeout);
+//         timeout = setTimeout(later, wait);
+//         if (callNow) func.apply(context, args);
+//     };
+// }
 
-const svgs = [...document.getElementsByClassName("svgPath")]
-const svgs1 = [...document.getElementsByClassName("path1")]
-const svgs2 = [...document.getElementsByClassName("path2")]
-const svgs3 = [...document.getElementsByClassName("path3")]
-const svgs4 = [...document.getElementsByClassName("path4")]
-const svgs5 = [...document.getElementsByClassName("path5")]
-const svgs6 = [...document.getElementsByClassName("path6")]
+const svgs = Array.prototype.slice.call(document.getElementsByClassName("svgPath"))
+const svgs1 = Array.prototype.slice.call(document.getElementsByClassName("path1"))
+const svgs2 = Array.prototype.slice.call(document.getElementsByClassName("path2"))
+const svgs3 = Array.prototype.slice.call(document.getElementsByClassName("path3"))
+const svgs4 = Array.prototype.slice.call(document.getElementsByClassName("path4"))
+const svgs5 = Array.prototype.slice.call(document.getElementsByClassName("path5"))
+const svgs6 = Array.prototype.slice.call(document.getElementsByClassName("path6"))
 const lengths = [];
 
 const mainDiv = document.querySelector('.mainDiv')
@@ -140,4 +140,4 @@ function scrollFunc() {
     })
 }
 // offset the svg dash by the same amount as the percentage scrolled
-window.addEventListener("scroll", debounce(scrollFunc));
+window.addEventListener("scroll", scrollFunc);

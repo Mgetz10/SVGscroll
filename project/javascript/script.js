@@ -1,4 +1,4 @@
-const interactiveBtns = document.querySelectorAll('.option')
+const interactiveBtns = Array.prototype.slice.call(document.querySelectorAll('.option'))
 const optionsContainer = document.querySelector('.optionsContainer')
 const bottomContainer = document.querySelector('.bottomContainer')
 const interactionIframeContainer = document.querySelector('.interactionIframeContainer')
@@ -16,4 +16,6 @@ function hideIframe() {
 
 interactionIframeContainer.addEventListener('click', hideIframe)
 
-interactiveBtns.forEach(btn => btn.addEventListener('click', iframeShow))
+interactiveBtns.forEach(function (btn) {
+    btn.addEventListener('click', iframeShow)
+})

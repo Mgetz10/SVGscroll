@@ -51,6 +51,7 @@ span {
 .Layer_3 {
   /* stroke: #2775e2; */
   stroke: #ff9b12;
+  -webkit-filter: blur(2px);
   filter: blur(2px);
   z-index: 1;
   stroke-width: 2;
@@ -90,6 +91,7 @@ span {
   position: absolute;
   width: 100%;
   background: #ffffff;
+  -webkit-filter: blur(25px);
   filter: blur(25px);
   z-index: 3;
 }
@@ -97,6 +99,12 @@ span {
 .blurbartop {
   top: 21%;
   height: 11%;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .blurbar {
+    display: none;
+  }
 }
 
 .toppic {
@@ -110,6 +118,7 @@ span {
 
 /* top svg draw effect */
 .top {
+  height: 62.5%;
   top: 25%;
   width: 100%;
 }
@@ -133,7 +142,7 @@ span {
   width: 71%;
   top: 66%;
   line-height: 1.2rem;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   z-index: 4;
 }
 
@@ -151,7 +160,8 @@ span {
   height: 13.5%;
   font-size: 2rem;
   margin: 0%;
-  box-shadow: -1px 2px 5px #00000047;
+  -webkit-box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.27);
+  box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.27);
   z-index: 4;
 }
 
@@ -172,6 +182,8 @@ span {
 }
 
 .iframeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 67%;
@@ -189,6 +201,7 @@ span {
   width: 100%;
   height: 100%;
   left: 0%;
+  -webkit-transition: all 0.5s cubic-bezier(0.6, 1.67, 1, 1);
   transition: all 0.5s cubic-bezier(0.6, 1.67, 1, 1);
 }
 
@@ -224,6 +237,7 @@ span {
   border: none;
   cursor: pointer;
   z-index: 4;
+  border-radius: 1.4rem;
 }
 
 .arrow img {
@@ -249,7 +263,7 @@ span {
   top: 97%;
   width: 1.5%;
   height: 1.2%;
-  background: #ff990199;
+  background: rgba(255, 153, 1, 0.6);
   cursor: pointer;
 }
 
@@ -278,7 +292,6 @@ span {
 }
 
 /* middle section */
-
 .middleContainer {
   position: absolute;
   top: 39%;
@@ -297,6 +310,7 @@ span {
 }
 
 .middle {
+  height: 61%;
   top: 18%;
   width: 94%;
   left: -0.5%;
@@ -332,6 +346,7 @@ span {
   top: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   z-index: 100;
   background: rgba(0, 0, 0, 0.27);
@@ -348,10 +363,13 @@ iframe {
   top: 50%;
   height: 46%;
   border: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   left: 50%;
   border-radius: 4px;
+  -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -361,12 +379,15 @@ iframe {
   width: 100%;
   height: 15.5%;
   top: 58.5%;
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
 .option {
+  border-collapse: separate;
   position: absolute;
-  box-shadow: -3px 3px 9px 0px #00000073;
+  -webkit-box-shadow: -3px 3px 9px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: -3px 3px 9px 0px rgba(0, 0, 0, 0.45);
   height: 48%;
   width: 28%;
   background: white;
@@ -379,6 +400,7 @@ iframe {
   width: 100%;
   height: 54%;
   overflow: hidden;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.27);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.27);
 }
 
@@ -447,6 +469,7 @@ iframe {
   right: 0;
   margin: 0 auto;
   z-index: -1;
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
@@ -462,6 +485,7 @@ iframe {
 
 .bottom {
   top: 0%;
+  height: 58.2%;
   width: 100%;
 }
 
@@ -486,6 +510,7 @@ iframe {
   background: gainsboro;
   text-align: unset;
   font-family: "YanoneKaffeesatz";
+  -webkit-box-shadow: -2px 3px 8px 0px rgba(0, 0, 0, 0.68);
   box-shadow: -2px 3px 8px 0px rgba(0, 0, 0, 0.68);
 }
 

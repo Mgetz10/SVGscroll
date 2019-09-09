@@ -1,9 +1,9 @@
 // carousel
 const iframeContainer = document.querySelector('.iframeContainer')
-const carouselImgs = [...document.querySelectorAll('.iframeContainer img')];
+const carouselImgs = Array.prototype.slice.call(document.querySelectorAll('.iframeContainer img'))
 const arrowLeft = document.querySelector('.arrowLeft');
 const arrowRight = document.querySelector('.arrowRight');
-const dots = document.querySelectorAll('.carouselDots')
+const dots = Array.prototype.slice.call(document.querySelectorAll('.carouselDots'))
 
 
 function move(paramDirection) {
@@ -34,7 +34,7 @@ function move(paramDirection) {
 
     carouselImgs[newPos].style.left = '0%';
 
-    carouselImgs.forEach(img => {
+    carouselImgs.forEach(function (img) {
         var thisPos = parseInt(img.classList[0].split('pos')[1])
         var posDif = thisPos - newPos
         var newPercentage = '' + posDif + "00" + '%'
@@ -49,4 +49,6 @@ arrowLeft.addEventListener('click', function () {
 arrowRight.addEventListener('click', function () {
     move("right")
 })
-dots.forEach(dot => dot.addEventListener('click', move))
+dots.forEach(function (dot) {
+    dot.addEventListener('click', move)
+})
