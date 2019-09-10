@@ -6,6 +6,8 @@ const interactionIframe = document.querySelector('#interactionIframe')
 
 function iframeShow() {
     interactionIframeContainer.classList.remove('hidden')
+    console.log(interactionIframe.offsetWidth)
+    interactionIframe.style.height = interactionIframe.offsetWidth / (16 / 9)
     interactionIframe.src = this.dataset.src
     console.log(interactionIframeContainer.classList)
 }
@@ -18,4 +20,9 @@ interactionIframeContainer.addEventListener('click', hideIframe)
 
 interactiveBtns.forEach(function (btn) {
     btn.addEventListener('click', iframeShow)
+})
+
+window.addEventListener('resize', function () {
+    interactionIframe.style.height = toString(interactionIframe.offsetWidth / (16 / 9));
+    console.log(interactionIframe.offsetWidth)
 })

@@ -101,7 +101,8 @@ span {
   height: 11%;
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
   .blurbar {
     display: none;
   }
@@ -371,6 +372,10 @@ iframe {
   transition: all 0.8s ease-out;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+iframe body {
+  background-color: none;
 }
 
 /* options */
