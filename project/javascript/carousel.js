@@ -1,9 +1,9 @@
 // carousel
-const iframeContainer = document.querySelector('.iframeContainer')
-const carouselImgs = Array.prototype.slice.call(document.querySelectorAll('.iframeContainer img'))
-const arrowLeft = document.querySelector('.arrowLeft');
-const arrowRight = document.querySelector('.arrowRight');
-const dots = Array.prototype.slice.call(document.querySelectorAll('.carouselDots'))
+var iframeContainer = document.querySelector('.iframeContainer')
+var carouselImgs = Array.prototype.slice.call(document.querySelectorAll('.iframeContainer img'))
+var arrowLeft = document.querySelector('.arrowLeft');
+var arrowRight = document.querySelector('.arrowRight');
+var dots = Array.prototype.slice.call(document.querySelectorAll('.carouselDots'))
 
 
 function move(paramDirection) {

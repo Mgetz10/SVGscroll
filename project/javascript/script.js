@@ -1,8 +1,8 @@
-const interactiveBtns = Array.prototype.slice.call(document.querySelectorAll('.option'))
-const optionsContainer = document.querySelector('.optionsContainer')
-const bottomContainer = document.querySelector('.bottomContainer')
-const interactionIframeContainer = document.querySelector('.interactionIframeContainer')
-const interactionIframe = document.querySelector('#interactionIframe')
+var interactiveBtns = Array.prototype.slice.call(document.querySelectorAll('.option'))
+var optionsContainer = document.querySelector('.optionsContainer')
+var bottomContainer = document.querySelector('.bottomContainer')
+var interactionIframeContainer = document.querySelector('.interactionIframeContainer')
+var interactionIframe = document.querySelector('#interactionIframe')
 
 function iframeShow() {
     interactionIframeContainer.classList.remove('hidden')

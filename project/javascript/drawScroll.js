@@ -14,22 +14,22 @@
 //     };
 // }
 
-const svgs = Array.prototype.slice.call(document.getElementsByClassName("svgPath"))
-const svgs1 = Array.prototype.slice.call(document.getElementsByClassName("path1"))
-const svgs2 = Array.prototype.slice.call(document.getElementsByClassName("path2"))
-const svgs3 = Array.prototype.slice.call(document.getElementsByClassName("path3"))
-const svgs4 = Array.prototype.slice.call(document.getElementsByClassName("path4"))
-const svgs5 = Array.prototype.slice.call(document.getElementsByClassName("path5"))
-const svgs6 = Array.prototype.slice.call(document.getElementsByClassName("path6"))
-const lengths = [];
+var svgs = Array.prototype.slice.call(document.getElementsByClassName("svgPath"))
+var svgs1 = Array.prototype.slice.call(document.getElementsByClassName("path1"))
+var svgs2 = Array.prototype.slice.call(document.getElementsByClassName("path2"))
+var svgs3 = Array.prototype.slice.call(document.getElementsByClassName("path3"))
+var svgs4 = Array.prototype.slice.call(document.getElementsByClassName("path4"))
+var svgs5 = Array.prototype.slice.call(document.getElementsByClassName("path5"))
+var svgs6 = Array.prototype.slice.call(document.getElementsByClassName("path6"))
+var lengths = [];
 
-const mainDiv = document.querySelector('.mainDiv')
+var mainDiv = document.querySelector('.mainDiv')
 
 var mobileConsoleLog = document.querySelector('.mobileConsoleLog')
 
 mobileConsoleLog.innerHTML = "";
 
-// const logo = document.querySelector('.logo')
+// var logo = document.querySelector('.logo')
 // logo.style.width = mainDiv.offsetWidth * 0.51
 // logo.style.left = mainDiv.offsetLeft * 0.51
 // console.log(mainDiv.offsetLeft)
@@ -81,8 +81,8 @@ function scrollFunc() {
     //     logo.style.position = "absolute";
     //     logo.style.top = "5%";
     // }
-    const middleOffset = 0.25;
-    const bottomOffset = 0.65;
+    var middleOffset = 0.25;
+    var bottomOffset = 0.65;
     svgs.forEach(function (svg, index) {
         var draw = 0;
 
