@@ -1,6 +1,6 @@
 // carousel
 var iframeContainer = document.querySelector('.iframeContainer')
-var carouselImgs = Array.prototype.slice.call(document.querySelectorAll('.iframeContainer img'))
+var carouselImgs = Array.prototype.slice.call(document.querySelectorAll('.iframeContainer iframe'))
 var arrowLeft = document.querySelector('.arrowLeft');
 var arrowRight = document.querySelector('.arrowRight');
 var dots = Array.prototype.slice.call(document.querySelectorAll('.carouselDots'))
