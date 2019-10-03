@@ -410,10 +410,22 @@ iframe.hidden {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.27);
 }
 
-.optionImgContainer img {
+.optionImgContainer video {
   position: absolute;
-  width: 100%;
-  height: 140%;
+  width: 112%;
+  height: 132%;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.option2 video {
+  position: absolute;
+  width: 112%;
+  height: 132%;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .optionHeader {
@@ -440,20 +452,26 @@ iframe.hidden {
 }
 
 .option1 {
+  /* left: 20%; */
   left: 5%;
+  /* top: 52%; */
 }
 
 .option2 {
   left: 36%;
+  /* top: 52%; */
 }
 
 .option3 {
+  /* top: 52%; */
+  /* left: 51%; */
   left: 67%;
 }
 
 .option4 {
+  left: 20%;
   top: 52%;
-  left: 5%;
+  /* left: 5%; */
 }
 
 .option5 {
@@ -462,8 +480,9 @@ iframe.hidden {
 }
 
 .option6 {
+  left: 51%;
   top: 52%;
-  left: 67%;
+  /* left: 67%; */
 }
 
 .bottomContainer {
