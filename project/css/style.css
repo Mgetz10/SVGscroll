@@ -195,6 +195,9 @@ span {
   overflow: hidden;
   /* background: white; */
   /* border-radius: 20px; */
+  box-sizing: border-box;
+  /* border: 1px solid #00000017; */
+  box-shadow: 0 0 11px 0px #0000001f;
 }
 
 .iframeContainer iframe {
