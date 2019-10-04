@@ -137,6 +137,21 @@ function scrollFunc() {
                 }
                 break;
         }
+
+        //fade in
+        interactiveBtns.forEach(function (btn) {
+            const slideInAt =
+                window.scrollY + window.innerHeight - btn.offsetHeight / 2;
+            // bottom of the image
+            const imageBottom = optionsContainer.offsetTop + btn.offsetTop + btn.offsetHeight;
+            const isHalfShown = slideInAt > optionsContainer.offsetTop + btn.offsetTop;
+            const isNotScrolledPast = window.scrollY < imageBottom;
+            if (isHalfShown && isNotScrolledPast) {
+                btn.classList.remove("hidden");
+            } else {
+                btn.classList.add("hidden");
+            }
+        })
     })
 }
 // offset the svg dash by the same amount as the percentage scrolled

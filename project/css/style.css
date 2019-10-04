@@ -312,6 +312,17 @@ span {
   z-index: 3;
   right: 0;
   margin: 0 auto;
+  animation: hover 2s ease-in-out infinite alternate;
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(-0%);
+  }
+
+  100% {
+    transform: translateY(-4%);
+  }
 }
 
 .middle {
@@ -402,6 +413,12 @@ iframe.hidden {
   background: white;
   overflow: hidden;
   cursor: pointer;
+  height: 48%;
+  transition: all 1s;
+}
+
+.option:hover .examples {
+  transform: scale(1.1)
 }
 
 .optionImgContainer {
@@ -452,6 +469,7 @@ iframe.hidden {
   left: 81%;
   font-size: 1.05rem;
   color: #ff9901;
+  transition: 0.2s all;
 }
 
 .option1 {
@@ -486,6 +504,31 @@ iframe.hidden {
   left: 51%;
   top: 52%;
   /* left: 67%; */
+}
+
+.option1.hidden {
+  transform: translateY(-25%) translateX(-25%);
+  opacity: 0;
+}
+
+.option4.hidden {
+  transform: translateY(25%) translateX(-25%);
+  opacity: 0;
+}
+
+.option3.hidden {
+  transform: translateY(-25%) translateX(25%);
+  opacity: 0;
+}
+
+.option6.hidden {
+  transform: translateY(25%) translateX(25%);
+  opacity: 0;
+}
+
+.option2.hidden {
+  transform: translateY(-25%);
+  opacity: 0;
 }
 
 .bottomContainer {
