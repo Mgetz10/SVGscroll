@@ -375,9 +375,9 @@ iframe.hidden {
 
 #interactionIframe {
   position: absolute;
-  width: 69%;
+  width: 57%;
   top: 50%;
-  height: 46%;
+  height: 32vw;
   border: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
