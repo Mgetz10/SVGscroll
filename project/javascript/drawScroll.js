@@ -54,6 +54,17 @@ svgs.forEach(function (svg, index) {
     svg.style.strokeDashoffset = lengths[index];
 })
 
+// var isSafari = false
+// var ua = navigator.userAgent.toLowerCase();
+// if (ua.indexOf('safari') != -1) {
+//     if (ua.indexOf('chrome') > -1) {
+//         alert("Chrome") // Chrome
+//     } else {
+//         isSafari = true;
+//         alert(isSafari)
+//     }
+// }
+
 function scrollFunc() {
     var isMobile = false; //initiate as false
     // device detection
@@ -67,6 +78,8 @@ function scrollFunc() {
     } else {
         scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
     }
+
+    // console.log(document.body.scrollTop, document.documentElement.scrollTop, document.documentElement.scrollHeight, document.documentElement.clientHeight)
     // var testObject = {
     //     "document.body.scrollTop": document.body.scrollTop,
     //     "document.body.scrollTop": document.body.scrollTop,
@@ -90,50 +103,50 @@ function scrollFunc() {
             case 0: //top grey
                 draw = lengths[index] * scrollpercent;
                 // Reverse the drawing (when scrolling upwards)
-                svg.style.strokeDashoffset = lengths[index] - draw / 3;
+                svg.style.strokeDashoffset = lengths[index] - draw / 1.5;
                 break;
             case 1: //top white
                 draw = lengths[index] * scrollpercent;
-                svg.style.strokeDashoffset = lengths[index] - draw / 7;
+                svg.style.strokeDashoffset = lengths[index] - draw / 3;
                 break;
             case 2: //top orange
                 draw = lengths[index] * scrollpercent;
-                svg.style.strokeDashoffset = lengths[index] - draw / 7;
+                svg.style.strokeDashoffset = lengths[index] - draw / 3;
                 break;
             case 3: //middle grey
                 if (scrollpercent > middleOffset) {
                     draw = lengths[index] * (scrollpercent - middleOffset);
-                    svg.style.strokeDashoffset = lengths[index] - draw / 2;
+                    svg.style.strokeDashoffset = lengths[index] - draw / 1.2;
                 }
                 break;
             case 4: //middle white
                 if (scrollpercent > middleOffset) {
                     draw = lengths[index] * (scrollpercent - middleOffset);
-                    svg.style.strokeDashoffset = lengths[index] - draw / 3
+                    svg.style.strokeDashoffset = lengths[index] - draw / 1.6
                 }
                 break;
             case 5: //middle orange
                 if (scrollpercent > middleOffset) {
                     draw = lengths[index] * (scrollpercent - middleOffset);
-                    svg.style.strokeDashoffset = lengths[index] - draw / 3
+                    svg.style.strokeDashoffset = lengths[index] - draw / 1.6
                 }
                 break;
             case 6: //bottom grey
                 if (scrollpercent > bottomOffset) {
                     draw = lengths[index] * (scrollpercent - bottomOffset);
-                    svg.style.strokeDashoffset = lengths[index] - draw / 2.5;
+                    svg.style.strokeDashoffset = lengths[index] - draw / 1.5;
                 }
                 break;
             case 7: //bottom white
                 if (scrollpercent > bottomOffset) {
                     draw = lengths[index] * (scrollpercent - bottomOffset);
-                    svg.style.strokeDashoffset = lengths[index] - draw / 3;
+                    svg.style.strokeDashoffset = lengths[index] - draw / 2;
                 }
                 break;
             case 8: //bottom orange
                 if (scrollpercent > bottomOffset) {
                     draw = lengths[index] * (scrollpercent - bottomOffset);
-                    svg.style.strokeDashoffset = lengths[index] - draw / 3;
+                    svg.style.strokeDashoffset = lengths[index] - draw / 2;
                 }
                 break;
         }
