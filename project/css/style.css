@@ -306,7 +306,7 @@ span {
 
 .middlepic {
   position: absolute;
-  top: 0%;
+  top: 0.5%;
   left: -3%;
   width: 80%;
   z-index: 3;
