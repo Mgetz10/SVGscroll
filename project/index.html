@@ -11,11 +11,7 @@
 </head>
 
 <body>
-  <div class="mobileConsoleLog">test</div>
-  <div class="interactionIframeContainer hidden">
-    <iframe id="interactionIframe" title="Inline Frame Example" src="">
-    </iframe>
-  </div>
+  <!-- <div class="mobileConsoleLog">test</div> -->
   <div class="mainDiv">
     <div class="topContainer">
       <div class="topWords">
@@ -103,7 +99,7 @@
         odit quaerat laudantium amet?</p>
       <div class="iframeContainer">
         <iframe class="pos0 active" title="Inline Frame Example"
-          src="https://www.simpleshowinteractive.com/projects/internal/menus/#/I1">
+          src="https://www.simpleshowinteractive.com/projects/internal/menus/#/I5">
         </iframe>
         <iframe class="pos1" title="Inline Frame Example"
           src="https://www.simpleshowinteractive.com/projects/internal/menus/#/I2">
@@ -115,7 +111,7 @@
           src="https://www.simpleshowinteractive.com/projects/internal/menus/#/I4">
         </iframe>
         <iframe class="pos4" title="Inline Frame Example"
-          src="https://www.simpleshowinteractive.com/projects/internal/menus/#/I5">
+          src="https://www.simpleshowinteractive.com/projects/internal/menus/#/I1">
         </iframe>
         <!-- <img src="image/iframe.svg" alt="" class="pos0 active">
         <img src="image/iframe.svg" alt="" class="pos1">
@@ -176,7 +172,7 @@ c0-1.6,1.3-3,2.9-3c0,0,0.1,0,0.1,0"></path>
     </div>
 
     <div class="optionsContainer">
-      <div class="option hidden option1" data-src="https://simpleshowinteractive.com/projects/internal/dragNdrops">
+      <div class="option hidden option1" data-frame="dndiframe">
         <div class="optionImgContainer">
           <video id="dndex" playsinline loop autoplay preload="auto" muted>
             <source src="videos/dndex.mp4" type="video/mp4" label="360p" res="360">
@@ -187,9 +183,9 @@ c0-1.6,1.3-3,2.9-3c0,0,0.1,0,0.1,0"></path>
           qui? Consequatur consectetur at corrupti laborum.</p>
         <p class="examples">Examples</p>
       </div>
-      <div class="option hidden option2" data-src="https://simpleshowinteractive.com/projects/internal/hotspots">
+      <div class="option hidden option2" data-frame="hotspotiframe">
         <div class="optionImgContainer">
-          <video id="dndex" playsinline loop autoplay preload="auto" muted>
+          <video id="hotspotex" playsinline loop autoplay preload="auto" muted>
             <source src="videos/hotspotex.mp4" type="video/mp4" label="360p" res="360">
           </video>
         </div>
@@ -198,9 +194,9 @@ c0-1.6,1.3-3,2.9-3c0,0,0.1,0,0.1,0"></path>
           qui? Consequatur consectetur at corrupti laborum.</p>
         <p class="examples">Examples</p>
       </div>
-      <div class="option hidden option3" data-src="https://simpleshowinteractive.com/projects/internal/quiz">
+      <div class="option hidden option3" data-frame="quiziframe">
         <div class="optionImgContainer">
-          <video id="dndex" playsinline loop autoplay preload="auto" muted>
+          <video id="quizex" playsinline loop autoplay preload="auto" muted>
             <source src="videos/quizex.mp4" type="video/mp4" label="360p" res="360">
           </video>
         </div>
@@ -209,9 +205,9 @@ c0-1.6,1.3-3,2.9-3c0,0,0.1,0,0.1,0"></path>
           qui? Consequatur consectetur at corrupti laborum.</p>
         <p class="examples">Examples</p>
       </div>
-      <div class="option hidden option4" data-src="https://simpleshowinteractive.com/projects/internal/sortables">
+      <div class="option hidden option4" data-frame="sortiframe">
         <div class="optionImgContainer">
-          <video id="dndex" playsinline loop autoplay preload="auto" muted>
+          <video id="sortex" playsinline loop autoplay preload="auto" muted>
             <source src="videos/sortex.mp4" type="video/mp4" label="360p" res="360">
           </video>
         </div>
@@ -223,16 +219,16 @@ c0-1.6,1.3-3,2.9-3c0,0,0.1,0,0.1,0"></path>
           qui? Consequatur consectetur at corrupti laborum.</p>
         <p class="examples">Examples</p>
       </div>
-      <!-- <div class="option hidden option5" data-src="https://simpleshowinteractive.com/projects/internal/sortables2">
+      <!-- <div class="option hidden option5" data-frame="optionHeadiframe">
           <div class="optionImgContainer"><img src="image/sortable2.svg" alt=""></div>
           <h4 class="optionHeader">Sortables Type 2</h4>
           <p class="optionDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia deleniti sunt rem ex
             qui? Consequatur consectetur at corrupti laborum.</p>
             <p class="examples">Examples</p>
           </div> -->
-      <div class="option hidden option6" data-src="https://simpleshowinteractive.com/projects/internal/custom">
+      <div class="option hidden option6" data-frame="customiframe">
         <div class="optionImgContainer">
-          <video id="dndex" playsinline loop autoplay preload="auto" muted>
+          <video id="customex" playsinline loop autoplay preload="auto" muted>
             <source src="videos/customex.mp4" type="video/mp4" label="360p" res="360">
           </video>
         </div>
@@ -286,9 +282,29 @@ c0-1.6,1.3-3,2.9-3c0,0,0.1,0,0.1,0"></path>
             src="image/arrowRight.svg" alt=""></span></button>
     </div>
   </div>
-  <script src="javascript/script.js"></script>
+  <div class="dndiframe interactionIframeContainer hidden">
+    <iframe class="interactioniframe" src="https://simpleshowinteractive.com/projects/internal/dragNdrops">
+    </iframe>
+  </div>
+  <div class="hotspotiframe interactionIframeContainer hidden">
+    <iframe class="interactioniframe" src="https://simpleshowinteractive.com/projects/internal/hotspots">
+    </iframe>
+  </div>
+  <div class="quiziframe interactionIframeContainer hidden">
+    <iframe class="interactioniframe" src="https://simpleshowinteractive.com/projects/internal/quiz">
+    </iframe>
+  </div>
+  <div class="sortiframe interactionIframeContainer hidden">
+    <iframe class="interactioniframe" src="https://simpleshowinteractive.com/projects/internal/sortables">
+    </iframe>
+  </div>
+  <div class="customiframe interactionIframeContainer hidden">
+    <iframe class="interactioniframe" src="https://simpleshowinteractive.com/projects/internal/custom">
+    </iframe>
+  </div>
   <script src="javascript/drawScroll.js"></script>
   <script src="javascript/carousel.js"></script>
+  <script src="javascript/script.js"></script>
 </body>
 
 </html>
