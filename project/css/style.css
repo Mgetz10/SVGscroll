@@ -379,9 +379,11 @@ iframe.hidden {
 
 .interactioniframe {
   position: absolute;
-  width: 57%;
   top: 50%;
-  height: 32vw;
+  width: 90%;
+  max-width: 151vh;
+  max-height: 48vw;
+  height: 90%;
   border: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -391,6 +393,7 @@ iframe.hidden {
   transition: all 0.8s ease-out;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  /* background: green; */
 }
 
 #interactionIframe body {
