@@ -2,7 +2,7 @@ html,
 body {
   /* background: #2d352e; */
   margin: 0;
-  font-family: "YanoneKaffeesatz";
+  font-family: 'YanoneKaffeesatz';
 }
 
 h1,
@@ -101,8 +101,7 @@ span {
   height: 11%;
 }
 
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .blurbar {
     display: none;
   }
@@ -152,7 +151,7 @@ span {
   width: 26%;
   left: 43%;
   top: 86.4%;
-  font-family: "YanoneKaffeesatz";
+  font-family: 'YanoneKaffeesatz';
   background: #ff9901;
   border: none;
   padding: 0%;
@@ -377,7 +376,7 @@ iframe.hidden {
   height: 0%;
 }
 
-.interactioniframe {
+.interactionIframeContainer iframe {
   position: absolute;
   top: 50%;
   width: 90%;
@@ -425,7 +424,7 @@ iframe.hidden {
 }
 
 .option:hover .examples {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .optionImgContainer {
@@ -587,7 +586,7 @@ iframe.hidden {
   font-size: 4rem;
   background: gainsboro;
   text-align: unset;
-  font-family: "YanoneKaffeesatz";
+  font-family: 'YanoneKaffeesatz';
   -webkit-box-shadow: -2px 3px 8px 0px rgba(0, 0, 0, 0.68);
   box-shadow: -2px 3px 8px 0px rgba(0, 0, 0, 0.68);
 }
