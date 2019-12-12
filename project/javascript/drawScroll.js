@@ -54,12 +54,12 @@ var fontSizeFactor = 69;
 var fontSize = mainDiv.offsetWidth / fontSizeFactor;
 document.documentElement.style.fontSize = fontSize + 'px';
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   var fontSize = mainDiv.offsetWidth / fontSizeFactor;
   document.documentElement.style.fontSize = fontSize + 'px';
 });
 
-svgs.forEach(function(svg, index) {
+svgs.forEach(function (svg, index) {
   lengths.push(svg.getTotalLength());
   // start position of the drawing - normal display pre-animation
   svg.style.strokeDasharray = lengths[index];
@@ -83,10 +83,6 @@ var bottomOffset = 0.65;
 
 var lazyLoadMarker = document.querySelector('.middleContainer');
 var iframesPlaced = false;
-var iframeKeys = [];
-interactiveBtns.forEach(function(btn) {
-  iframeKeys.push(btn.dataset.frame);
-});
 
 function scrollFunc() {
   // var isMobile = false; //initiate as false
@@ -124,7 +120,7 @@ function scrollFunc() {
   //     logo.style.top = "5%";
   // }
 
-  svgs.forEach(function(svg, index) {
+  svgs.forEach(function (svg, index) {
     var draw = 0;
 
     switch (index) {
@@ -180,7 +176,7 @@ function scrollFunc() {
     }
 
     //fade in
-    interactiveBtns.forEach(function(btn) {
+    interactiveBtns.forEach(function (btn) {
       var slideInAt =
         window.scrollY + window.innerHeight - btn.offsetHeight / 2;
       // bottom of the image
@@ -188,9 +184,14 @@ function scrollFunc() {
         optionsContainer.offsetTop + btn.offsetTop + btn.offsetHeight;
       var isHalfShown = slideInAt > optionsContainer.offsetTop + btn.offsetTop;
       var isNotScrolledPast = window.scrollY < imageBottom;
+
       if (isHalfShown && isNotScrolledPast) {
+        var btnVid = btn.querySelector('video')
+        btnVid.play()
         btn.classList.remove('hidden');
       } else {
+        var btnVid = btn.querySelector('video')
+        btnVid.pause()
         btn.classList.add('hidden');
       }
     });
@@ -207,34 +208,10 @@ function scrollFunc() {
       if (isHalfShown) {
         //     generate and load iframes
         iframesPlaced = true;
-        createIframes(iframeKeys);
+        loadIframes(iframeKeys);
       }
     }
   });
 }
 // offset the svg dash by the same amount as the percentage scrolled
 window.addEventListener('scroll', scrollFunc);
-
-function createIframes(iframeKeys) {
-  iframeKeys.forEach(function(key) {
-    // create container
-    var container = document.createElement('div');
-    // add classes (interactionIframeContainer hidden ${dataset.frame})
-    var classArray = [key, 'interactionIframeContainer', 'hidden'];
-    classArray.forEach(function(className) {
-      container.classList.add(className);
-    });
-    // create iframe
-    var newiFrame = document.createElement('iframe');
-    // create URL from dataset
-    var iframeURL =
-      'https://simpleshowinteractive.com/projects/internal/' + key;
-    // add src
-    newiFrame.src = iframeURL;
-    // append to container
-    container.appendChild(newiFrame);
-    // append to maindiv
-    document.body.append(container);
-    container.addEventListener('click', hideIframe);
-  });
-}

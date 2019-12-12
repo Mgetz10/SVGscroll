@@ -4,9 +4,9 @@ var interactiveBtns = Array.prototype.slice.call(
 var optionsContainer = document.querySelector('.optionsContainer');
 var bottomContainer = document.querySelector('.bottomContainer');
 
-// var interactionIframes = Array.prototype.slice.call(document.querySelectorAll('.interactionIframeContainer iframe'))
+var interactionIframes = Array.prototype.slice.call(document.querySelectorAll('.interactionIframeContainer iframe'))
 
-interactiveBtns.forEach(function(btn) {
+interactiveBtns.forEach(function (btn) {
   btn.addEventListener('click', iframeShow);
 });
 
@@ -23,4 +23,21 @@ function iframeShow() {
 
 function hideIframe() {
   this.classList.add('hidden');
+}
+
+var iframeKeys = [];
+interactiveBtns.forEach(function (btn) {
+  iframeKeys.push(btn.dataset.frame);
+});
+
+function loadIframes(iframeKeys) {
+  interactionIframes.forEach(function (iFrame, idx) {
+    // create URL from dataset
+    var iframeURL =
+      'https://simpleshowinteractive.com/projects/internal/' + iframeKeys[idx];
+    // add src
+    iFrame.src = iframeURL;
+
+    iFrame.parentElement.addEventListener('click', hideIframe);
+  });
 }
