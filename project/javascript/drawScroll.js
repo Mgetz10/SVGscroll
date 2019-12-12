@@ -234,7 +234,7 @@ function createIframes(iframeKeys) {
     // append to container
     container.appendChild(newiFrame);
     // append to maindiv
-    mainDiv.append(container);
+    document.body.append(container);
     container.addEventListener('click', hideIframe);
   });
 }
